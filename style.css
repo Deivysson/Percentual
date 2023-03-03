@@ -1,0 +1,63 @@
+	h1 {
+		text-align: center;
+		color: #444;
+		margin-top: 30px;
+	}
+
+	table {
+		margin: 30px auto;
+		border-collapse: collapse;
+		width: 80%;
+		max-width: 800px;
+		background-color: #fff;
+		box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+	}
+
+	th {
+		background-color: #555;
+		color: #fff;
+		padding: 10px;
+		text-align: left;
+	}
+
+	td {
+		border-bottom: 1px solid #ddd;
+		padding: 10px;
+		text-align: left;
+	}
+
+	td#SpPercentual,
+	td#RjPercentual,
+	td#MgPercentual,
+	td#EsPercentual,
+	td#OutrosPercentual,
+	b#total {
+		font-weight: bold;
+	}
+
+	td#SpPercentual::before,
+	td#RjPercentual::before,
+	td#MgPercentual::before,
+	td#EsPercentual::before,
+	td#OutrosPercentual::before {
+		content: "%";
+		margin-right: 3px;
+	}
+
+	td#SpPercentual,
+	td#RjPercentual,
+	td#MgPercentual,
+	td#EsPercentual,
+	td#OutrosPercentual {
+		text-align: right;
+	}
+
+	b#total {
+		text-align: right;
+	}
+
+	tr:last-child td {
+		background-color: #ddd;
+		font-weight: bold;
+	}
+

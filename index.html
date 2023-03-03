@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Percentuais</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<h1>Calculadora de Percentuais</h1>
+	<table>
+		<thead>
+			<tr>
+				<th>Estado</th>
+				<th>Faturamento Mensal (R$)</th>
+				<th>Percentual de Representação (%)</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>SP</td>
+				<td>67.836,43</td>
+				<td id="SpPercentual"></td>
+			</tr>
+			<tr>
+				<td>RJ</td>
+				<td>36.678,66</td>
+				<td id="RjPercentual"></td>
+			</tr>
+			<tr>
+				<td>MG</td>
+				<td>29.229,88</td>
+				<td id="MgPercentual"></td>
+			</tr>
+			<tr>
+				<td>ES</td>
+				<td>27.165,48</td>
+				<td id="EsPercentual"></td>
+			</tr>
+			<tr>
+				<td>Outros</td>
+				<td>19.849,53</td>
+				<td id="OutrosPercentual"></td>
+			</tr>
+			<tr>
+				<td><b>Total</b></td>
+				<td><b id="total"></b></td>
+				<td><b>100%</b></td>
+			</tr>
+		</tbody>
+	</table>
+	<script>
+		
+		const faturamento_sp = 67836.43;
+		const faturamento_rj = 36678.66;
+		const faturamento_mg = 29229.88;
+		const faturamento_es = 27165.48;
+		const faturamento_outros = 19849.53;
+
+		
+		const total_mensal = faturamento_sp + faturamento_rj + faturamento_mg + faturamento_es + faturamento_outros;
+
+		
+		const percentual_sp = (faturamento_sp / total_mensal) * 100;
+		const percentual_rj = (faturamento_rj / total_mensal) * 100;
+		const percentual_mg = (faturamento_mg / total_mensal) * 100;
+		const percentual_es = (faturamento_es / total_mensal) * 100;
+		const percentual_outros = (faturamento_outros / total_mensal) * 100;
+
+		
+		document.getElementById("SpPercentual").innerHTML = percentual_sp.toFixed(2);
+		document.getElementById("RjPercentual").innerHTML = percentual_rj.toFixed(2);
+		document.getElementById("MgPercentual").innerHTML = percentual_mg.toFixed(2);
+		document.getElementById("EsPercentual").innerHTML = percentual_es.toFixed(2);
+		document.getElementById("OutrosPercentual").innerHTML = percentual_outros.toFixed(2);
+		document.getElementById("total").innerHTML = total_mensal.toFixed(2);
+</script>
+
+</body>
+</html>
